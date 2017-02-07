@@ -51,7 +51,8 @@ d3.json("tree.json", function (error, root) {
         .attr("y", -10)
         .attr("width", 10)
         .attr("height", 20)
-        .attr("class", 'slider');
+        .attr("class", 'slider')
+        .style("cursor", "pointer");
 
     var svgDiv = d3.select("div");
 
@@ -150,6 +151,7 @@ d3.json("tree.json", function (error, root) {
                         .attr("x", function (d) { return 0 })
                         .attr("y", function (d) { return a.yS })
                         .attr("class", name + '1')
+                        .style("user-select", "none")
                         .text(function (d) { return arrayLeters[cout]; });
 
                     cout += 1;
