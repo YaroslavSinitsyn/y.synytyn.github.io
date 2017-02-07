@@ -96,6 +96,15 @@ d3.json("tree.json", function (error, root) {
     
     function showPoint() {
         var cout = 0;
+        arr.forEach(function (b) {
+            var name = b.name + "a";
+            d3.select('.' + name).remove();
+            svg.select('.' + name + 1).remove();
+
+            node.select('.' + b.name)
+                        .style("visibility", "hidden");
+        });
+
         arr.forEach(function (a) {
             var result = lineIntersect(Math.round(Line.xS), Math.round(Line.yS), Math.round(Line.xE), Math.round(Line.yE), Math.round(a.xS), Math.round(a.yS), Math.round(a.xE), Math.round(a.yE));
 
@@ -107,6 +116,35 @@ d3.json("tree.json", function (error, root) {
 
                 var t = d3.select('.' + name)[0];
 
+                
+                if (t[0] == null && a.rect.y - 2 > 0) {
+                    if (cout % 2) {
+                        var rect = d3.select("svg")
+                            .append("rect")
+                            .attr("x", 0)
+                            .attr("y", a.rect.y + 38)
+                            .attr("width", a.rect.width)
+                            .attr("height", a.rect.height + 2)
+                            .attr("fill", '#9ed3f8')
+                            .attr("fill-opacity", 0.4)
+                            .attr("class", name);
+                    }
+                    else {
+                        var rect = d3.select("svg")
+                            .append("rect")
+                            .attr("x", 0)
+                            .attr("y", a.rect.y + 38)
+                            .attr("width", a.rect.width)
+                            .attr("height", a.rect.height + 2)
+                            .attr("fill", '#ffffff')
+                            .attr("fill-opacity", 0.4)
+                            .attr("class", name);
+                    }
+
+                    //if (cout !== 0)
+                        d3.select('.'+name).moveToBack();
+                }
+
                 if (t[0] == null) {
                     svg.append("text")
                         .attr("x", function (d) { return 0 })
@@ -115,21 +153,6 @@ d3.json("tree.json", function (error, root) {
                         .text(function (d) { return arrayLeters[cout]; });
 
                     cout += 1;
-                }
-                
-
-                if (t[0] == null && a.rect.y - 2 > 0) {
-                    var rect = d3.select("svg")
-                    .append("rect")
-                    .attr("x", 0)
-                    .attr("y", a.rect.y+38)
-                    .attr("width", a.rect.width)
-                    .attr("height", a.rect.height+2)
-                    .attr("fill", '#9ed3f8')
-                    .attr("fill-opacity", 0.4)
-                    .attr("class", name);
-
-                    d3.select('.'+name).moveToBack();
                 }
                 
             }
