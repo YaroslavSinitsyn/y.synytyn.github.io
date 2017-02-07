@@ -50,7 +50,8 @@ d3.json("tree.json", function (error, root) {
         .attr("x", -5)
         .attr("y", -10)
         .attr("width", 10)
-        .attr("height", 20);
+        .attr("height", 20)
+        .attr("class", 'slider');
 
     var svgDiv = d3.select("div");
 
@@ -62,7 +63,7 @@ d3.json("tree.json", function (error, root) {
         if (flag) {
             var x = d3.mouse(this)[0];
             if (x > 40 && x < 765) {
-                d3.select("rect").attr("transform", function () {
+                d3.select(".slider").attr("transform", function () {
                     return "translate(" + (x - 40) + ",0)"
                 });
                 var a = line.attr("transform", function () {
@@ -104,7 +105,7 @@ d3.json("tree.json", function (error, root) {
                 node.select('.' + a.name)
                         .style("visibility", "visible");
 
-                var t = svg.select('.' + name)[0];
+                var t = d3.select('.' + name)[0];
 
                 if (t[0] == null) {
                     svg.append("text")
@@ -118,14 +119,17 @@ d3.json("tree.json", function (error, root) {
                 
 
                 if (t[0] == null && a.rect.y - 2 > 0) {
-                    var rect = svg.append("rect")
+                    var rect = d3.select("svg")
+                    .append("rect")
                     .attr("x", 0)
-                    .attr("y", a.rect.y-2)
+                    .attr("y", a.rect.y+38)
                     .attr("width", a.rect.width)
                     .attr("height", a.rect.height+2)
                     .attr("fill", '#9ed3f8')
                     .attr("fill-opacity", 0.4)
                     .attr("class", name);
+
+                    d3.select('.'+name).moveToBack();
                 }
                 
             }
@@ -133,13 +137,27 @@ d3.json("tree.json", function (error, root) {
                 node.select('.' + a.name)
                         .style("visibility", "hidden");
 
-                svg.select('.' + name).remove();
+                d3.select('.' + name).remove();
                 svg.select('.' + name + 1).remove();
             }
-            console.log(result);
         })
 
     }
+
+    d3.selection.prototype.moveToFront = function () {
+        return this.each(function () {
+            this.parentNode.appendChild(this);
+        });
+    };
+
+    d3.selection.prototype.moveToBack = function () {
+        return this.each(function () {
+            var firstChild = this.parentNode.firstChild;
+            if (firstChild) {
+                this.parentNode.insertBefore(this, firstChild);
+            }
+        });
+    };
 
     function elbow(d, i) {
         return "M" + d.source.y + "," + d.source.x
@@ -270,10 +288,6 @@ d3.json("tree.json", function (error, root) {
     t.on("mousedown", function () {
         console.log('click');
     })
-  
-    //  .attr("dx", function(d) { return d.children ? -8 : 8; })    //  .attr("dy", 3)
-    //  .style("text-anchor", function(d) { return d.children ? "end" : "start"; })
-    //  .text(function (d) { return d.name; });
 
     var arrayLeters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O','P','Q','R','S','T','U','V','W', 'X', 'Y', 'Z'];
     showPoint();
