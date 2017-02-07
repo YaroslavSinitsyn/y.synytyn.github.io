@@ -31,7 +31,7 @@ d3.json("tree.json", function (error, root) {
     var flag = false;
     var width = 800, height = 550;
     var tree = d3.layout.tree()
-            .size([height-40, width - 160]);
+            .size([height-40, width-80]);
 
     var svg = d3.select("div").append("svg")
         .attr("width", width)
@@ -196,7 +196,13 @@ d3.json("tree.json", function (error, root) {
     function offset(nodeArray) {
         nodeArray.forEach(function (node) {
             if (node.offset !== undefined) {
-                node.y += node.offset;
+                if (node.offset === 0 && node.y !== 720) {
+                    node.y += 720 - node.y;
+                }
+                else{
+                    node.y += node.offset;
+                }
+                    
             }
         });
     }
@@ -314,7 +320,13 @@ d3.json("tree.json", function (error, root) {
         console.log('click');
     })
 
-    var arrayLeters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O','P','Q','R','S','T','U','V','W', 'X', 'Y', 'Z'];
+    t.on("mouseover", function () {
+        d3.select(this).style("cursor", "pointer");
+        
+    })
+
+    var arrayLeters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
+                        'AA', 'AB', 'AC', 'AD', 'AE', 'AF', 'AG', 'AH', 'AI', 'AJ', 'AK', 'AL', 'AM', 'AN', 'AO', 'AP', 'AQ', 'AR', 'AS', 'AT', 'AU', 'AV','AX', 'AY', 'AZ'];
     showPoint();
 
     function lineIntersect(x1, y1, x2, y2, x3, y3, x4, y4) {

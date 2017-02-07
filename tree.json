@@ -2,7 +2,7 @@
   "children": [
     {
       "name": "A",
-      "offset": 0,
+      "offset": 10,
       "children": [
         {
           "name": "C",
@@ -14,11 +14,71 @@
               "children": [
                 {
                   "name": "C11",
-                  "offset": 0
+                  "offset": 5,
+                  "children": [
+                    {
+                      "name": "C111",
+                      "offset": -10,
+                      "children": [
+                        {
+                          "name": "C1111",
+                          "offset": 0
+                        },
+                        {
+                          "name": "C1112",
+                          "offset": 0
+                        }
+                      ]
+                    },
+                    {
+                      "name": "C112",
+                      "offset": -5,
+                      "children": [
+                        {
+                          "name": "C1121",
+                          "offset": 0
+                        },
+                        {
+                          "name": "C1122",
+                          "offset": 0
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "name": "C12",
-                  "offset": 0
+                  "offset": 10,
+                  "children": [
+                    {
+                      "name": "C121",
+                      "offset": 10,
+                      "children": [
+                        {
+                          "name": "C1121",
+                          "offset": 0
+                        },
+                        {
+                          "name": "C1122",
+                          "offset": 0
+                        }
+                      ]
+                    },
+                    {
+                      "name": "C122",
+                      "offset": -5,
+                      "children": [
+                        {
+                          "name": "C1221",
+                          "offset": 0
+                        },
+                        {
+                          "name": "C1222",
+                          "offset": 0
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             },
@@ -29,11 +89,71 @@
               "children": [
                 {
                   "name": "D11",
-                  "offset": 0
+                  "offset": 2,
+                  "children": [
+                    {
+                      "name": "D111",
+                      "offset": 5,
+                      "children": [
+                        {
+                          "name": "D1111",
+                          "offset": 0
+                        },
+                        {
+                          "name": "D1112",
+                          "offset": 0
+                        }
+                      ]
+                    },
+                    {
+                      "name": "D112",
+                      "offset": 10,
+                      "children": [
+                        {
+                          "name": "D1121",
+                          "offset": 0
+                        },
+                        {
+                          "name": "D1122",
+                          "offset": 0
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "name": "D12",
-                  "offset": 0
+                  "offset": 8,
+                  "children": [
+                    {
+                      "name": "D121",
+                      "offset": -5,
+                      "children": [
+                        {
+                          "name": "D1211",
+                          "offset": 0
+                        },
+                        {
+                          "name": "D1212",
+                          "offset": 0
+                        }
+                      ]
+                    },
+                    {
+                      "name": "D122",
+                      "offset": 10,
+                      "children": [
+                        {
+                          "name": "D1221",
+                          "offset": 0
+                        },
+                        {
+                          "name": "D1222",
+                          "offset": 0
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
 
@@ -50,11 +170,71 @@
               "children": [
                 {
                   "name": "C21",
-                  "offset": 0
+                  "offset": 11,
+                  "children": [
+                    {
+                      "name": "C211",
+                      "offset": -20,
+                      "children": [
+                        {
+                          "name": "C2111",
+                          "offset": 0
+                        },
+                        {
+                          "name": "C2112",
+                          "offset": 0
+                        }
+                      ]
+                    },
+                    {
+                      "name": "C212",
+                      "offset": -30,
+                      "children": [
+                        {
+                          "name": "C2121",
+                          "offset": 0
+                        },
+                        {
+                          "name": "C2122",
+                          "offset": 0
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "name": "C22",
-                  "offset": 0
+                  "offset": 5,
+                  "children": [
+                    {
+                      "name": "C221",
+                      "offset": -40,
+                      "children": [
+                        {
+                          "name": "C2211",
+                          "offset": 0
+                        },
+                        {
+                          "name": "C2212",
+                          "offset": 0
+                        }
+                      ]
+                    },
+                    {
+                      "name": "C222",
+                      "offset": -20,
+                      "children": [
+                        {
+                          "name": "C2221",
+                          "offset": 0
+                        },
+                        {
+                          "name": "C2222",
+                          "offset": 0
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             },
@@ -64,11 +244,71 @@
               "children": [
                 {
                   "name": "D21",
-                  "offset": 0
+                  "offset": -10,
+                  "children": [
+                    {
+                      "name": "D211",
+                      "offset": 20,
+                      "children": [
+                        {
+                          "name": "D2111",
+                          "offset": 0
+                        },
+                        {
+                          "name": "D2112",
+                          "offset": 0
+                        }
+                      ]
+                    },
+                    {
+                      "name": "D222",
+                      "offset": 10,
+                      "children": [
+                        {
+                          "name": "D2221",
+                          "offset": 0
+                        },
+                        {
+                          "name": "D2222",
+                          "offset": 0
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "name": "D22",
-                  "offset": 0
+                  "offset": -5,
+                  "children": [
+                    {
+                      "name": "D221",
+                      "offset": -40,
+                      "children": [
+                        {
+                          "name": "D2211",
+                          "offset": 0
+                        },
+                        {
+                          "name": "D2212",
+                          "offset": 0
+                        }
+                      ]
+                    },
+                    {
+                      "name": "D222",
+                      "offset": 20,
+                      "children": [
+                        {
+                          "name": "D2221",
+                          "offset": 0
+                        },
+                        {
+                          "name": "D2222",
+                          "offset": 0
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             }
@@ -88,11 +328,111 @@
               "children": [
                 {
                   "name": "F11",
-                  "offset": 0
+                  "offset": -30,
+                  "children": [
+                    {
+                      "name": "F111",
+                      "offset": 10,
+                      "children": [
+                        {
+                          "name": "F1111",
+                          "offset": 0
+                        },
+                        {
+                          "name": "F1112",
+                          "offset": 0
+                        }
+                      ]
+                    },
+                    {
+                      "name": "F112",
+                      "offset": 20,
+                      "children": [
+                        {
+                          "name": "F1121",
+                          "offset": 0
+                        },
+                        {
+                          "name": "F1112",
+                          "offset": 0
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "name": "F12",
-                  "offset": 0
+                  "offset": 10,
+                  "children": [
+                    {
+                      "name": "F121",
+                      "offset": -30,
+                      "children": [
+                        {
+                          "name": "F1211",
+                          "offset": 5,
+                          "children": [
+                            {
+                              "name": "F12111",
+                              "offset": 0
+                            },
+                            {
+                              "name": "F12112",
+                              "offset": 0
+                            }
+                          ]
+                        },
+                        {
+                          "name": "F1212",
+                          "offset": 10,
+                          "children": [
+                            {
+                              "name": "F12121",
+                              "offset": 0
+                            },
+                            {
+                              "name": "F12122",
+                              "offset": 0
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "F122",
+                      "offset": -10,
+                      "children": [
+                        {
+                          "name": "F1221",
+                          "offset": 5,
+                          "children": [
+                            {
+                              "name": "F12211",
+                              "offset": 0
+                            },
+                            {
+                              "name": "F12212",
+                              "offset": 0
+                            }
+                          ]
+                        },
+                        {
+                          "name": "F1222",
+                          "offset": -20,
+                          "children": [
+                            {
+                              "name": "F12221",
+                              "offset": 0
+                            },
+                            {
+                              "name": "F12222",
+                              "offset": 0
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             },
@@ -102,11 +442,72 @@
               "children": [
                 {
                   "name": "F21",
-                  "offset": 0
+                  "offset": -20,
+                  "children": [
+                    {
+                      "name": "F211",
+                      "offset": 20,
+                      "children": [
+                            {
+                              "name": "F2111",
+                              "offset": 0
+                            },
+                            {
+                              "name": "F2112",
+                              "offset": 0
+                            }
+                          ]
+                    },
+                    {
+                      "name": "F212",
+                      "offset": 10,
+                       "children": [
+                            {
+                              "name": "F2121",
+                              "offset": 0
+                            },
+                            {
+                              "name": "F2122",
+                              "offset": 0
+                            }
+                          ]
+                    }
+                  ]
                 },
                 {
                   "name": "F22",
-                  "offset": 0
+                  "offset": -5,
+                  "children": [
+                    {
+                      "name": "F221",
+                      "offset": 10,
+                       "children": [
+                            {
+                              "name": "F2221",
+                              "offset": 0
+                            },
+                            {
+                              "name": "F2222",
+                              "offset": 0
+                            }
+                          ]
+                    },
+                    {
+                      "name": "F222",
+                      "offset": 20,
+                       "children": [
+                            {
+                              "name": "F22221",
+                              "offset": 0
+                            },
+                            {
+                              "name": "F22222",
+                              "offset": 0
+                            }
+                          ]
+
+                    }
+                  ]
                 }
               ]
             }
@@ -122,11 +523,71 @@
               "children": [
                 {
                   "name": "X11",
-                  "offset": 0
+                  "offset": -5,
+                  "children": [
+                    {
+                      "name": "X111",
+                      "offset": 10,
+                       "children": [
+                            {
+                              "name": "X1111",
+                              "offset": 0
+                            },
+                            {
+                              "name": "X1112",
+                              "offset": 0
+                            }
+                          ]
+                    },
+                    {
+                      "name": "X112",
+                      "offset": 20,
+                       "children": [
+                            {
+                              "name": "X1121",
+                              "offset": 0
+                            },
+                            {
+                              "name": "X1122",
+                              "offset": 0
+                            }
+                          ]
+                    }
+                  ]
                 },
                 {
                   "name": "X12",
-                  "offset": 0
+                  "offset": 10,
+                  "children": [
+                    {
+                      "name": "X121",
+                      "offset": 30,
+                       "children": [
+                            {
+                              "name": "X1211",
+                              "offset": 0
+                            },
+                            {
+                              "name": "X1212",
+                              "offset": 0
+                            }
+                          ]
+                    },
+                    {
+                      "name": "X122",
+                      "offset": 5,
+                       "children": [
+                            {
+                              "name": "X1221",
+                              "offset": 0
+                            },
+                            {
+                              "name": "X1222",
+                              "offset": 0
+                            }
+                          ]
+                    }
+                  ]
                 }
               ]
             },
@@ -136,11 +597,71 @@
               "children": [
                 {
                   "name": "X21",
-                  "offset": 0
+                  "offset": -40,
+                  "children": [
+                    {
+                      "name": "X211",
+                      "offset": 30,
+                       "children": [
+                            {
+                              "name": "X2111",
+                              "offset": 0
+                            },
+                            {
+                              "name": "X2112",
+                              "offset": 0
+                            }
+                          ]
+                    },
+                    {
+                      "name": "X212",
+                      "offset": 10,
+                       "children": [
+                            {
+                              "name": "X2121",
+                              "offset": 0
+                            },
+                            {
+                              "name": "X2122",
+                              "offset": 0
+                            }
+                          ]
+                    }
+                  ]
                 },
                 {
                   "name": "X22",
-                  "offset": 0
+                  "offset": 10,
+                  "children": [
+                    {
+                      "name": "X221",
+                      "offset": 20,
+                       "children": [
+                            {
+                              "name": "X2211",
+                              "offset": 0
+                            },
+                            {
+                              "name": "X2212",
+                              "offset": 0
+                            }
+                          ]
+                    },
+                    {
+                      "name": "X222",
+                      "offset": 30,
+                       "children": [
+                            {
+                              "name": "X2221",
+                              "offset": 0
+                            },
+                            {
+                              "name": "X2222",
+                              "offset": 0
+                            }
+                          ]
+                    }
+                  ]
                 }
               ]
             }
