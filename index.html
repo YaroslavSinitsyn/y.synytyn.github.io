@@ -39,6 +39,20 @@ d3.json("tree.json", function (error, root) {
         .append("g")
         .attr("transform", "translate(40,40)")
 
+    var example = d3.select("svg").append("filter")
+        .attr('x',0)
+        .attr('y',0)
+        .attr("width", 1)
+        .attr("height", 1)
+        .attr('id', 'solid');
+
+    example.append("feFlood")
+        .attr('flood-color', '#0094ff');
+
+    example.append("feComposite")
+        .attr('in', 'SourceGraphic');
+        
+
     svg.append("line")
         .style("stroke", "black")
         .attr("x1", 0)
@@ -113,7 +127,8 @@ d3.json("tree.json", function (error, root) {
 
             if (result === true) {
                 node.select('.' + a.name)
-                        .style("visibility", "visible");
+                        .style("visibility", "visible")
+
 
                 var t = d3.select('.' + name)[0];
 
@@ -142,7 +157,6 @@ d3.json("tree.json", function (error, root) {
                             .attr("class", name);
                     }
 
-                    //if (cout !== 0)
                         d3.select('.'+name).moveToBack();
                 }
 
@@ -318,15 +332,22 @@ d3.json("tree.json", function (error, root) {
 
     t.on("mousedown", function () {
         console.log('click');
-    })
-
-    t.on("mouseover", function () {
-        d3.select(this).style("cursor", "pointer");
+        
         
     })
 
-    var arrayLeters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
-                        'AA', 'AB', 'AC', 'AD', 'AE', 'AF', 'AG', 'AH', 'AI', 'AJ', 'AK', 'AL', 'AM', 'AN', 'AO', 'AP', 'AQ', 'AR', 'AS', 'AT', 'AU', 'AV','AX', 'AY', 'AZ'];
+    var nameLast;
+    t.on("mouseover", function () {
+        d3.select(this).style("cursor", "pointer");
+        nameLast = this.className.animVal + 'a1';
+        d3.select('.' + nameLast).attr('filter', "url(#solid)").attr('fill', "white");
+    })
+
+    t.on("mouseleave", function () {
+        d3.select('.' + nameLast).attr('filter', 'none').attr('fill', "black");
+    })
+
+    var arrayLeters = ['A:', 'B:', 'C:', 'D:', 'E:', 'F:', 'G:', 'H:', 'I:', 'J:', 'K:', 'L:',                      'M:', 'N:', 'O:', 'P:', 'Q:', 'R:', 'S:', 'T:', 'U:', 'V:', 'W:', 'X:',                      'Y:', 'Z:', 'AA:', 'AB:', 'AC:', 'AD:', 'AE:', 'AF:', 'AG:', 'AH:', 'AI:',                   'AJ:', 'AK:', 'AL:', 'AM:', 'AN:', 'AO:', 'AP:', 'AQ:', 'AR:', 'AS:', 'AT:',                 'AU:', 'AV:','AX:', 'AY:', 'AZ:'];
     showPoint();
 
     function lineIntersect(x1, y1, x2, y2, x3, y3, x4, y4) {
