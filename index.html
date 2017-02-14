@@ -20,20 +20,23 @@
 </style>
 <body>
   
-    <div style="text-align: center; margin-top:20px">
-        <span id ="#name" style="border:1px solid red;">
+    <div style="margin-left:400px; margin-top:30px">
+        <span id="#name" style="border:1px solid red;">
             100
         </span>
     </div>
-   
-    
-    <!--<div>
 
-    </div>-->
-    <input type="button" onclick="OnHundred()" value="100" />
-    <input type="button" onclick="OnOneThousand()" value="1280" />
-    <input type="button" onclick="OnFiveThousand()" value="5120" />
-    <input type="button" onclick="OnTenThousand()" value="10240" />
+    <div class="svgDiv">
+     
+    </div>
+
+    <div style="margin-top:10px">
+        <input type="button" onclick="OnHundred()" value="100" />
+        <input type="button" onclick="OnOneThousand()" value="1280" />
+        <input type="button" onclick="OnFiveThousand()" value="5120" />
+        <input type="button" onclick="OnTenThousand()" value="10240" />
+    </div>
+    
 
     <script src="https://d3js.org/d3.v3.min.js"></script>
     <script>
@@ -117,7 +120,7 @@
                 var tree = d3.layout.tree()
                         .size([height - 40, width - 80]);
 
-                var svg = d3.select("div").append("svg")
+                var svg = d3.select(".svgDiv").append("svg")
                     .attr("width", width)
                     .attr("height", height)
                     .append("g")
