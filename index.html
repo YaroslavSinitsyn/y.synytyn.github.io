@@ -41,6 +41,8 @@
     <script src="https://d3js.org/d3.v3.min.js"></script>
     <script>
         function OnHundred() {
+            var svg = d3.select("svg");
+            svg.selectAll("*").remove();
             d3.select("svg").remove();
             ShowSvg("tree.json");
             document.getElementById('#name').textContent = 100;
@@ -48,18 +50,24 @@
         }
 
         function OnOneThousand() {
+            var svg = d3.select("svg");
+            svg.selectAll("*").remove();
             d3.select("svg").remove();
             document.getElementById('#name').textContent = 1280;
             ShowSvg("tree1.json");
         }
 
         function OnFiveThousand() {
+            var svg = d3.select("svg");
+            svg.selectAll("*").remove();
             d3.select("svg").remove();
             document.getElementById('#name').textContent = 5120;
             ShowSvg("tree2.json");
         }
 
         function OnTenThousand() {
+            var svg = d3.select("svg");
+            svg.selectAll("*").remove();
             d3.select("svg").remove();
             document.getElementById('#name').textContent = 10240;
             ShowSvg("tree3.json");
