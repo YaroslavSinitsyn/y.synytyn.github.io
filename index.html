@@ -44,9 +44,8 @@
             var svg = d3.select("svg");
             svg.selectAll("*").remove();
             d3.select("svg").remove();
-            ShowSvg("tree.json");
             document.getElementById('#name').textContent = 100;
-            d3.select("#name").attr('text', '100')
+            ShowSvg("tree.json");
         }
 
         function OnOneThousand() {
