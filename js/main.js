@@ -80,7 +80,7 @@ function loadJson(name) {
     loadJsonD3(name).then((resolve) => {
         renderTree(resolve);
     })
-    .catch(reject => console.log(reject));
+    .catch(reject => console.error(reject));
 }
  
 function renderTree(root) {
@@ -100,7 +100,6 @@ function renderTree(root) {
             else {
                 n.y += n.offset;
             }
-
         }
     });
 
@@ -212,16 +211,14 @@ function creatArrayLine(links) {
         if (Array.isArray(l.target.children))
             findNodeChild(l.target.children);
 
-        coordinatLine.xS = l.source.y;
-        coordinatLine.yS = l.target.x;
-        coordinatLine.xE = l.target.y;
-        coordinatLine.yE = l.target.x;
+        coordinatLine.xS = Math.round(l.source.y);
+        coordinatLine.yS = Math.round(l.target.x);
+        coordinatLine.xE = Math.round(l.target.y);
+        coordinatLine.yE = Math.round(l.target.x);
         coordinatLine.offset = l.target.offset;
         coordinatLine.name = l.target.name;
 
-
         coordinatLine.rect = getSelectRect(tempArray);
-
 
         arrLine.push(coordinatLine);
     });
@@ -371,14 +368,9 @@ function showPoint(node,line) {
     })
 
     arrFilter.forEach(function (a) {
-
-        if (a.offset === 0) {
-            result = false;
-        }
-        else {
-            var result = lineIntersect(Math.round(line.xS), Math.round(line.yS), Math.round(line.xE), Math.round(line.yE), Math.round(a.xS), Math.round(a.yS), Math.round(a.xE), Math.round(a.yE));
-        }
-
+    
+        var result = lineIntersect(line.xS, line.yS, line.xE, line.yE, a.xS, a.yS, a.xE, a.yE);
+        
         var name = a.name + "a";
 
         if (result === true) {
@@ -433,8 +425,7 @@ function showPoint(node,line) {
     })
 }
 
-var tree = d3.layout.tree()
-        .size([height - 40, width - 80]);
+var tree = d3.layout.tree().size([height - 40, width - 80]);
 
 window.onload = function () {
     addSvgObjtoDOM();
