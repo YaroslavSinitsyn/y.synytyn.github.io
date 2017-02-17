@@ -1,0 +1,25 @@
+{
+  "name": "yaroslavsinitsyn.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Tree.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server",
+    "start": "npm run lite" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YaroslavSinitsyn/yaroslavsinitsyn.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YaroslavSinitsyn/yaroslavsinitsyn.github.io/issues"
+  },
+  "homepage": "https://github.com/YaroslavSinitsyn/yaroslavsinitsyn.github.io#readme",
+  "devDependencies": {
+    "lite-server": "^2.2.2"
+  }
+}
