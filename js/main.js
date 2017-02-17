@@ -225,7 +225,7 @@ function creatArrayLine(links) {
 
 }
 
-function elbow(d, i) {
+function elbow(d) {
     return `M${d.source.y}, ${d.source.x}V${d.target.x}H${d.target.y}`;
 }
 
